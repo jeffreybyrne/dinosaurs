@@ -1,0 +1,545 @@
+1. Let's start by figuring out how many dinosaurs we have. Count the number of dinosaurs.
+
+dinosaurs=# select count(*) from dinos;
+ count
+-------
+   331
+(1 row)
+
+2. We want to open up our own version of Jurassic Park, but this time only with dinosaurs who are
+actually from the Jurassic period. Find all the dinosaurs from the Jurassic period.
+
+dinosaurs=# select name, period from dinos where period = 'Jurassic';
+        name         |  period
+---------------------+----------
+ Yuanmousaurus       | Jurassic
+ Yinlong             | Jurassic
+ Yingshanosaurus     | Jurassic
+ Yimenosaurus        | Jurassic
+ Yangchuanosaurus    | Jurassic
+ Yandusaurus         | Jurassic
+ Vulcanodon          | Jurassic
+ Tuojiangosaurus     | Jurassic
+ Torvosaurus         | Jurassic
+ Yunnanosaurus       | Jurassic
+ Sinraptor           | Jurassic
+ Stegosaurus         | Jurassic
+ Seismosaurus        | Jurassic
+ Segisaurus          | Jurassic
+ Scutellosaurus      | Jurassic
+ Scelidosaurus       | Jurassic
+ Saurophaganax       | Jurassic
+ Sarcosaurus         | Jurassic
+ Shunosaurus         | Jurassic
+ Rhoetosaurus        | Jurassic
+ Poekilopleuron      | Jurassic
+ Podokesaurus        | Jurassic
+ Piatnitzkysaurus    | Jurassic
+ Proceratosaurus     | Jurassic
+ Patagosaurus        | Jurassic
+ Pantydraco          | Jurassic
+ Datousaurus         | Jurassic
+ Ornitholestes       | Jurassic
+ Omeisaurus          | Jurassic
+ Nqwebasaurus        | Jurassic
+ Monolophosaurus     | Jurassic
+ Othnielia           | Jurassic
+ Megalosaurus        | Jurassic
+ Massospondylus      | Jurassic
+ Marshosaurus        | Jurassic
+ Mamenchisaurus      | Jurassic
+ Lufengosaurus       | Jurassic
+ Lophostropheus      | Jurassic
+ Lexovisaurus        | Jurassic
+ Metriacanthosaurus  | Jurassic
+ Lesothosaurus       | Jurassic
+ Kentrosaurus        | Jurassic
+ Juravenator         | Jurassic
+ Jingshanosaurus     | Jurassic
+ Janenschia          | Jurassic
+ Huayangosaurus      | Jurassic
+ Heterodontosaurus   | Jurassic
+ Kotasaurus          | Jurassic
+ Guanlong            | Jurassic
+ Giraffatitan        | Jurassic
+ Gasosaurus          | Jurassic
+ Gargoyleosaurus     | Jurassic
+ Eustreptospondylus  | Jurassic
+ Europasaurus        | Jurassic
+ Haplocanthosaurus   | Jurassic
+ Emausaurus          | Jurassic
+ Euhelopus           | Jurassic
+ Elaphrosaurus       | Jurassic
+ Dubreuillosaurus    | Jurassic
+ Dryosaurus          | Jurassic
+ Diplodocus          | Jurassic
+ Dilophosaurus       | Jurassic
+ Dicraeosaurus       | Jurassic
+ Cryolophosaurus     | Jurassic
+ Compsognathus       | Jurassic
+ Coelurus            | Jurassic
+ Chungkingosaurus    | Jurassic
+ Chirostenotes       | Jurassic
+ Chinshakiangosaurus | Jurassic
+ Chaoyangsaurus      | Jurassic
+ Dacentrurus         | Jurassic
+ Cetiosaurus         | Jurassic
+ Cetiosauriscus      | Jurassic
+ Ceratosaurus        | Jurassic
+ Chialingosaurus     | Jurassic
+ Brachytrachelopan   | Jurassic
+ Brachiosaurus       | Jurassic
+ Bellusaurus         | Jurassic
+ Barosaurus          | Jurassic
+ Barapasaurus        | Jurassic
+ Camarasaurus        | Jurassic
+ Anchisaurus         | Jurassic
+ Amygdalodon         | Jurassic
+ Ammosaurus          | Jurassic
+ Allosaurus          | Jurassic
+ Agilisaurus         | Jurassic
+ Apatosaurus         | Jurassic
+ Lapparentosaurus    | Jurassic
+ Hesperosaurus       | Jurassic
+ Camptosaurus        | Jurassic
+ Aardonyx            | Jurassic
+ Archaeopteryx       | Jurassic
+ (92 rows)
+
+3. Jurassic Park was a huge success for us. Now we want to open up a sequel park: Cretaceous Park.
+This time though, we're a little more organized, and we want to know how much space all these dinosaurs
+are going to take up. Find the total sum length of all the dinosaurs from the Cretaceous period.
+
+dinosaurs=# select sum(length) from dinos where period = 'Cretaceous';
+   sum
+---------
+ 1366.45
+(1 row)
+
+4. Great news! Our board of investors recently secured us a large island where we can put all the
+dinosaurs from both Jurassic Park and Cretaceous Park. This new park will be called Juraceous Park,
+which according to our focus groups really rolls off the tongue. Find all the dinosaurs from either
+the Jurassic OR Cretaceous periods, and order them by their species name alphabetically.
+
+dinosaurs=# select name from dinos where period in ('Jurassic','Cretaceous') order by name;
+          name
+-------------------------
+ Aardonyx
+ Abelisaurus
+ Achelousaurus
+ Achillobator
+ Acrocanthosaurus
+ Aegyptosaurus
+ Afrovenator
+ Agilisaurus
+ Alamosaurus
+ Albertaceratops
+ Albertosaurus
+ Alectrosaurus
+ Alioramus
+ Allosaurus
+ Alvarezsaurus
+ Amargasaurus
+ Ammosaurus
+ Ampelosaurus
+ Amygdalodon
+ Anatotitan
+ Anchiceratops
+ Anchisaurus
+ Ankylosaurus
+ Anserimimus
+ Antarctopelta
+ Antarctosaurus
+ Apatosaurus
+ Aragosaurus
+ Aralosaurus
+ Archaeoceratops
+ Archaeopteryx
+ Archaeornithomimus
+ Argentinosaurus
+ Arrhinoceratops
+ Atlascopcosaurus
+ Aucasaurus
+ Austrosaurus
+ Avaceratops
+ Avimimus
+ Bactrosaurus
+ Bagaceratops
+ Bambiraptor
+ Barapasaurus
+ Barosaurus
+ Baryonyx
+ Becklespinax
+ Beipiaosaurus
+ Bellusaurus
+ Borogovia
+ Brachiosaurus
+ Brachyceratops
+ Brachylophosaurus
+ Brachytrachelopan
+ Bugenasaura
+ Buitreraptor
+ Camarasaurus
+ Camptosaurus
+ Carcharodontosaurus
+ Carnotaurus
+ Caudipteryx
+ Cedarpelta
+ Centrosaurus
+ Ceratosaurus
+ Cetiosauriscus
+ Cetiosaurus
+ Chaoyangsaurus
+ Chasmosaurus
+ Chialingosaurus
+ Chinshakiangosaurus
+ Chirostenotes
+ Chubutisaurus
+ Chungkingosaurus
+ Citipati
+ Coelurus
+ Compsognathus
+ Conchoraptor
+ Confuciusornis
+ Corythosaurus
+ Cryolophosaurus
+ Dacentrurus
+ Daspletosaurus
+ Datousaurus
+ Deinocheirus
+ Deinonychus
+ Deltadromeus
+ Diceratops
+ Dicraeosaurus
+ Dilophosaurus
+ Diplodocus
+ Dracorex
+ Dravidosaurus
+ Dromaeosaurus
+ Dromiceiomimus
+ Dryosaurus
+ Dryptosaurus
+ Dubreuillosaurus
+ Edmontonia
+ Edmontosaurus
+ Einiosaurus
+ Elaphrosaurus
+ Emausaurus
+ Eolambia
+ Eotyrannus
+ Equijubus
+ Erketu
+ Erlikosaurus
+ Euhelopus
+ Euoplocephalus
+ Europasaurus
+ Eustreptospondylus
+ Fukuiraptor
+ Fukuisaurus
+ Gallimimus
+ Gargoyleosaurus
+ Garudimimus
+ Gasosaurus
+ Gasparinisaura
+ Gastonia
+ Giganotosaurus
+ Gilmoreosaurus
+ Giraffatitan
+ Gobisaurus
+ Gorgosaurus
+ Goyocephale
+ Graciliceratops
+ Gryposaurus
+ Guanlong
+ Hadrosaurus
+ Hagryphus
+ Haplocanthosaurus
+ Harpymimus
+ Hesperosaurus
+ Heterodontosaurus
+ Homalocephale
+ Huayangosaurus
+ Hylaeosaurus
+ Hypacrosaurus
+ Hypselosaurus
+ Hypsilophodon
+ Iguanodon
+ Indosuchus
+ Ingenia
+ Irritator
+ Isisaurus
+ Janenschia
+ Jaxartosaurus
+ Jingshanosaurus
+ Jinzhousaurus
+ Jobaria
+ Juravenator
+ Kentrosaurus
+ Khaan
+ Kotasaurus
+ Kritosaurus
+ Lamaceratops
+ Lambeosaurus
+ Lapparentosaurus
+ Leaellynasaura
+ Leptoceratops
+ Lesothosaurus
+ Lexovisaurus
+ Liaoceratops
+ Liaoxiornis
+ Ligabuesaurus
+ Lophorhothon
+ Lophostropheus
+ Lufengosaurus
+ Lurdusaurus
+ Magyarosaurus
+ Maiasaura
+ Majungatholus
+ Malawisaurus
+ Mamenchisaurus
+ Mapusaurus
+ Marshosaurus
+ Masiakasaurus
+ Massospondylus
+ Maxakalisaurus
+ Megalosaurus
+ Metriacanthosaurus
+ Microceratops
+ Micropachycephalosaurus
+ Microraptor
+ Minmi
+ Monolophosaurus
+ Mononykus
+ Muttaburrasaurus
+ Nanotyrannus
+ Nanshiungosaurus
+ Nemegtosaurus
+ Neovenator
+ Neuquenosaurus
+ Nigersaurus
+ Nipponosaurus
+ Noasaurus
+ Nodosaurus
+ Nomingia
+ Nothronychus
+ Nqwebasaurus
+ Omeisaurus
+ Opisthocoelicaudia
+ Ornitholestes
+ Ornithomimus
+ Orodromeus
+ Oryctodromeus
+ Othnielia
+ Ouranosaurus
+ Oviraptor
+ Pachycephalosaurus
+ Pachyrhinosaurus
+ Panoplosaurus
+ Pantydraco
+ Paralititan
+ Parasaurolophus
+ Parksosaurus
+ Patagosaurus
+ Pelicanimimus
+ Pelorosaurus
+ Pentaceratops
+ Piatnitzkysaurus
+ Pinacosaurus
+ Platyceratops
+ Pleurocoelus
+ Podokesaurus
+ Poekilopleuron
+ Polacanthus
+ Prenocephale
+ Probactrosaurus
+ Proceratosaurus
+ Prosaurolophus
+ Protarchaeopteryx
+ Protoceratops
+ Protohadros
+ Psittacosaurus
+ Quaesitosaurus
+ Rebbachisaurus
+ Rhabdodon
+ Rhoetosaurus
+ Rinchenia
+ Rugops
+ Saichania
+ Saltasaurus
+ Sarcosaurus
+ Saurolophus
+ Sauropelta
+ Saurophaganax
+ Saurornithoides
+ Scelidosaurus
+ Scutellosaurus
+ Secernosaurus
+ Segisaurus
+ Segnosaurus
+ Seismosaurus
+ Shamosaurus
+ Shanag
+ Shantungosaurus
+ Shunosaurus
+ Shuvuuia
+ Silvisaurus
+ Sinocalliopteryx
+ Sinornithosaurus
+ Sinosauropteryx
+ Sinraptor
+ Sinvenator
+ Sonidosaurus
+ Spinosaurus
+ Stegoceras
+ Stegosaurus
+ Stenopelix
+ Struthiomimus
+ Struthiosaurus
+ Stygimoloch
+ Styracosaurus
+ Suchomimus
+ Supersaurus
+ Talarurus
+ Tanius
+ Tarbosaurus
+ Tarchia
+ Telmatosaurus
+ Tenontosaurus
+ Therizinosaurus
+ Thescelosaurus
+ Torosaurus
+ Torvosaurus
+ Triceratops
+ Troodon
+ Tsagantegia
+ Tsintaosaurus
+ Tuojiangosaurus
+ Tylocephale
+ Tyrannosaurus
+ Udanoceratops
+ Unenlagia
+ Urbacodon
+ Utahraptor
+ Valdosaurus
+ Velociraptor
+ Vulcanodon
+ Wuerhosaurus
+ Yandusaurus
+ Yangchuanosaurus
+ Yimenosaurus
+ Yingshanosaurus
+ Yinlong
+ Yuanmousaurus
+ Yunnanosaurus
+ Zalmoxes
+ Zephyrosaurus
+ Zuniceratops
+(310 rows)
+
+5. Saurischians are the "lizard hipped" order of dinosaurs, and one of the two main branches.
+All carnivorous dinosaurs are Saurischians, but not all Saurischians are carnivorous. Find all
+the dinosaurs from the t_order Saurischia that are Herbivorous.
+
+dinosaurs=# select species from dinos where t_order = 'Saurischia' and diet = 'Herbivorous' order by species;
+     species
+------------------
+ Ajax
+ Altithorax
+ Atacis
+ Australis
+ Baharijensis
+ Bashanensis
+ Brancai
+ Brownei
+ Caducus
+ Candelariensis
+ Cazaui
+ Celestae
+ Colberti
+ Constructus
+ Conybearei
+ Dacus
+ Dixeyi
+ Ellisoni
+ Engelhardti
+ Fariasi
+ Garasbae
+ Hallorum
+ Hansemanni
+ Holgeri
+ Huenei
+ Huinculensis
+ Insignis
+ Ischiadicus
+ Jiangyiensis
+ Junghsiensis
+ Karibaensis
+ Leanzai
+ Lentus
+ Lii
+ Longus
+ Loricatus
+ Madagascariensis
+ Major
+ Mckillopi
+ Mesai
+ Mongoliensis
+ Nanus
+ Orientalis
+ Oxoniensis
+ Patagonicus
+ Patagonicus
+ Polyzelous
+ Priscus
+ Priscus
+ Robusta
+ Saihangaobiensis
+ Sanjuanensis
+ Skarzynskii
+ Stewarti
+ Stromeri
+ Sui
+ Supremus
+ Tagorei
+ Taqueti
+ Tiguidensis
+ Topai
+ Vivianae
+ Wichmannianus
+ Xinwaensis
+ Yamanpalliensis
+ Youngi
+ Zdanskyi
+ Zhongheensis
+(68 rows)
+
+6. Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
+
+dinosaurs=# select species from dinos where length = (select min(length) from dinos);
+  species
+-----------
+ Delicatus
+(1 row)
+
+dinosaurs=# select species from dinos where length = (select min(length) from dinos);
+  species
+-----------
+ Delicatus
+(1 row)
+
+dinosaurs=# update dinos set species = 'Shortie' where length = (select min(length) from dinos);
+UPDATE 1
+dinosaurs=# select species from dinos where length = (select min(length) from dinos);
+ species
+---------
+ Shortie
+(1 row)
+
+7. It's the first day of Dino School, and we're doing roll call. Find the alphabetically
+first dinosaur, so we can make sure they're present for class.
+
+dinosaurs=# select species from dinos order by species asc limit 1;
+  species
+-----------
+ Abakensis
+(1 row)
