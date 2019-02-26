@@ -9,102 +9,102 @@ dinosaurs=# select count(*) from dinos;
 2. We want to open up our own version of Jurassic Park, but this time only with dinosaurs who are
 actually from the Jurassic period. Find all the dinosaurs from the Jurassic period.
 
-dinosaurs=# select name, period from dinos where period = 'Jurassic';
+dinosaurs=# select name, period from dinos where period = 'Jurassic' order by name asc;
         name         |  period
 ---------------------+----------
- Yuanmousaurus       | Jurassic
- Yinlong             | Jurassic
- Yingshanosaurus     | Jurassic
- Yimenosaurus        | Jurassic
- Yangchuanosaurus    | Jurassic
- Yandusaurus         | Jurassic
- Vulcanodon          | Jurassic
- Tuojiangosaurus     | Jurassic
- Torvosaurus         | Jurassic
- Yunnanosaurus       | Jurassic
- Sinraptor           | Jurassic
- Stegosaurus         | Jurassic
- Seismosaurus        | Jurassic
- Segisaurus          | Jurassic
- Scutellosaurus      | Jurassic
- Scelidosaurus       | Jurassic
- Saurophaganax       | Jurassic
- Sarcosaurus         | Jurassic
- Shunosaurus         | Jurassic
- Rhoetosaurus        | Jurassic
- Poekilopleuron      | Jurassic
- Podokesaurus        | Jurassic
- Piatnitzkysaurus    | Jurassic
- Proceratosaurus     | Jurassic
- Patagosaurus        | Jurassic
- Pantydraco          | Jurassic
+ Aardonyx            | Jurassic
+ Agilisaurus         | Jurassic
+ Allosaurus          | Jurassic
+ Ammosaurus          | Jurassic
+ Amygdalodon         | Jurassic
+ Anchisaurus         | Jurassic
+ Apatosaurus         | Jurassic
+ Archaeopteryx       | Jurassic
+ Barapasaurus        | Jurassic
+ Barosaurus          | Jurassic
+ Bellusaurus         | Jurassic
+ Brachiosaurus       | Jurassic
+ Brachytrachelopan   | Jurassic
+ Camarasaurus        | Jurassic
+ Camptosaurus        | Jurassic
+ Ceratosaurus        | Jurassic
+ Cetiosauriscus      | Jurassic
+ Cetiosaurus         | Jurassic
+ Chaoyangsaurus      | Jurassic
+ Chialingosaurus     | Jurassic
+ Chinshakiangosaurus | Jurassic
+ Chirostenotes       | Jurassic
+ Chungkingosaurus    | Jurassic
+ Coelurus            | Jurassic
+ Compsognathus       | Jurassic
+ Cryolophosaurus     | Jurassic
+ Dacentrurus         | Jurassic
  Datousaurus         | Jurassic
- Ornitholestes       | Jurassic
- Omeisaurus          | Jurassic
- Nqwebasaurus        | Jurassic
- Monolophosaurus     | Jurassic
- Othnielia           | Jurassic
- Megalosaurus        | Jurassic
- Massospondylus      | Jurassic
- Marshosaurus        | Jurassic
- Mamenchisaurus      | Jurassic
- Lufengosaurus       | Jurassic
- Lophostropheus      | Jurassic
- Lexovisaurus        | Jurassic
- Metriacanthosaurus  | Jurassic
- Lesothosaurus       | Jurassic
- Kentrosaurus        | Jurassic
- Juravenator         | Jurassic
- Jingshanosaurus     | Jurassic
- Janenschia          | Jurassic
- Huayangosaurus      | Jurassic
- Heterodontosaurus   | Jurassic
- Kotasaurus          | Jurassic
- Guanlong            | Jurassic
- Giraffatitan        | Jurassic
- Gasosaurus          | Jurassic
- Gargoyleosaurus     | Jurassic
- Eustreptospondylus  | Jurassic
- Europasaurus        | Jurassic
- Haplocanthosaurus   | Jurassic
+ Dicraeosaurus       | Jurassic
+ Dilophosaurus       | Jurassic
+ Diplodocus          | Jurassic
+ Dryosaurus          | Jurassic
+ Dubreuillosaurus    | Jurassic
+ Elaphrosaurus       | Jurassic
  Emausaurus          | Jurassic
  Euhelopus           | Jurassic
- Elaphrosaurus       | Jurassic
- Dubreuillosaurus    | Jurassic
- Dryosaurus          | Jurassic
- Diplodocus          | Jurassic
- Dilophosaurus       | Jurassic
- Dicraeosaurus       | Jurassic
- Cryolophosaurus     | Jurassic
- Compsognathus       | Jurassic
- Coelurus            | Jurassic
- Chungkingosaurus    | Jurassic
- Chirostenotes       | Jurassic
- Chinshakiangosaurus | Jurassic
- Chaoyangsaurus      | Jurassic
- Dacentrurus         | Jurassic
- Cetiosaurus         | Jurassic
- Cetiosauriscus      | Jurassic
- Ceratosaurus        | Jurassic
- Chialingosaurus     | Jurassic
- Brachytrachelopan   | Jurassic
- Brachiosaurus       | Jurassic
- Bellusaurus         | Jurassic
- Barosaurus          | Jurassic
- Barapasaurus        | Jurassic
- Camarasaurus        | Jurassic
- Anchisaurus         | Jurassic
- Amygdalodon         | Jurassic
- Ammosaurus          | Jurassic
- Allosaurus          | Jurassic
- Agilisaurus         | Jurassic
- Apatosaurus         | Jurassic
- Lapparentosaurus    | Jurassic
+ Europasaurus        | Jurassic
+ Eustreptospondylus  | Jurassic
+ Gargoyleosaurus     | Jurassic
+ Gasosaurus          | Jurassic
+ Giraffatitan        | Jurassic
+ Guanlong            | Jurassic
+ Haplocanthosaurus   | Jurassic
  Hesperosaurus       | Jurassic
- Camptosaurus        | Jurassic
- Aardonyx            | Jurassic
- Archaeopteryx       | Jurassic
- (92 rows)
+ Heterodontosaurus   | Jurassic
+ Huayangosaurus      | Jurassic
+ Janenschia          | Jurassic
+ Jingshanosaurus     | Jurassic
+ Juravenator         | Jurassic
+ Kentrosaurus        | Jurassic
+ Kotasaurus          | Jurassic
+ Lapparentosaurus    | Jurassic
+ Lesothosaurus       | Jurassic
+ Lexovisaurus        | Jurassic
+ Lophostropheus      | Jurassic
+ Lufengosaurus       | Jurassic
+ Mamenchisaurus      | Jurassic
+ Marshosaurus        | Jurassic
+ Massospondylus      | Jurassic
+ Megalosaurus        | Jurassic
+ Metriacanthosaurus  | Jurassic
+ Monolophosaurus     | Jurassic
+ Nqwebasaurus        | Jurassic
+ Omeisaurus          | Jurassic
+ Ornitholestes       | Jurassic
+ Othnielia           | Jurassic
+ Pantydraco          | Jurassic
+ Patagosaurus        | Jurassic
+ Piatnitzkysaurus    | Jurassic
+ Podokesaurus        | Jurassic
+ Poekilopleuron      | Jurassic
+ Proceratosaurus     | Jurassic
+ Rhoetosaurus        | Jurassic
+ Sarcosaurus         | Jurassic
+ Saurophaganax       | Jurassic
+ Scelidosaurus       | Jurassic
+ Scutellosaurus      | Jurassic
+ Segisaurus          | Jurassic
+ Seismosaurus        | Jurassic
+ Shunosaurus         | Jurassic
+ Sinraptor           | Jurassic
+ Stegosaurus         | Jurassic
+ Torvosaurus         | Jurassic
+ Tuojiangosaurus     | Jurassic
+ Vulcanodon          | Jurassic
+ Yandusaurus         | Jurassic
+ Yangchuanosaurus    | Jurassic
+ Yimenosaurus        | Jurassic
+ Yingshanosaurus     | Jurassic
+ Yinlong             | Jurassic
+ Yuanmousaurus       | Jurassic
+ Yunnanosaurus       | Jurassic
+(92 rows)
 
 3. Jurassic Park was a huge success for us. Now we want to open up a sequel park: Cretaceous Park.
 This time though, we're a little more organized, and we want to know how much space all these dinosaurs
@@ -440,97 +440,91 @@ dinosaurs=# select name from dinos where period in ('Jurassic','Cretaceous') ord
 All carnivorous dinosaurs are Saurischians, but not all Saurischians are carnivorous. Find all
 the dinosaurs from the t_order Saurischia that are Herbivorous.
 
-dinosaurs=# select species from dinos where t_order = 'Saurischia' and diet = 'Herbivorous' order by species;
-     species
-------------------
- Ajax
- Altithorax
- Atacis
- Australis
- Baharijensis
- Bashanensis
- Brancai
- Brownei
- Caducus
- Candelariensis
- Cazaui
- Celestae
- Colberti
- Constructus
- Conybearei
- Dacus
- Dixeyi
- Ellisoni
- Engelhardti
- Fariasi
- Garasbae
- Hallorum
- Hansemanni
- Holgeri
- Huenei
- Huinculensis
- Insignis
- Ischiadicus
- Jiangyiensis
- Junghsiensis
- Karibaensis
- Leanzai
- Lentus
- Lii
- Longus
- Loricatus
- Madagascariensis
- Major
- Mckillopi
- Mesai
- Mongoliensis
- Nanus
- Orientalis
- Oxoniensis
- Patagonicus
- Patagonicus
- Polyzelous
- Priscus
- Priscus
- Robusta
- Saihangaobiensis
- Sanjuanensis
- Skarzynskii
- Stewarti
- Stromeri
- Sui
- Supremus
- Tagorei
- Taqueti
- Tiguidensis
- Topai
- Vivianae
- Wichmannianus
- Xinwaensis
- Yamanpalliensis
- Youngi
- Zdanskyi
- Zhongheensis
+dinosaurs=# select name from dinos where t_order = 'Saurischia' and diet = 'Herbivorous' order by name;
+        name
+---------------------
+ Aardonyx
+ Aegyptosaurus
+ Alamosaurus
+ Amargasaurus
+ Ammosaurus
+ Ampelosaurus
+ Amygdalodon
+ Anchisaurus
+ Antarctosaurus
+ Apatosaurus
+ Aragosaurus
+ Argentinosaurus
+ Austrosaurus
+ Barapasaurus
+ Barosaurus
+ Bellusaurus
+ Brachiosaurus
+ Brachytrachelopan
+ Camarasaurus
+ Cetiosauriscus
+ Cetiosaurus
+ Chinshakiangosaurus
+ Chubutisaurus
+ Datousaurus
+ Dicraeosaurus
+ Diplodocus
+ Erketu
+ Euhelopus
+ Europasaurus
+ Giraffatitan
+ Guaibasaurus
+ Haplocanthosaurus
+ Hypselosaurus
+ Isisaurus
+ Janenschia
+ Jingshanosaurus
+ Jobaria
+ Kotasaurus
+ Lapparentosaurus
+ Ligabuesaurus
+ Lufengosaurus
+ Magyarosaurus
+ Malawisaurus
+ Mamenchisaurus
+ Maxakalisaurus
+ Mussaurus
+ Nemegtosaurus
+ Neuquenosaurus
+ Nigersaurus
+ Omeisaurus
+ Opisthocoelicaudia
+ Pantydraco
+ Paralititan
+ Patagosaurus
+ Pelorosaurus
+ Plateosaurus
+ Pleurocoelus
+ Quaesitosaurus
+ Rebbachisaurus
+ Rhoetosaurus
+ Saltasaurus
+ Seismosaurus
+ Shunosaurus
+ Sonidosaurus
+ Supersaurus
+ Vulcanodon
+ Yimenosaurus
+ Yuanmousaurus
 (68 rows)
 
 6. Dinosaur names are hard to remember. Find the shortest dinosaur, and rename it Shortie.
 
-dinosaurs=# select species from dinos where length = (select min(length) from dinos);
-  species
------------
- Delicatus
+dinosaurs=# select name from dinos where length = (select min(length) from dinos);
+    name
+-------------
+ Liaoxiornis
 (1 row)
 
-dinosaurs=# select species from dinos where length = (select min(length) from dinos);
-  species
------------
- Delicatus
-(1 row)
-
-dinosaurs=# update dinos set species = 'Shortie' where length = (select min(length) from dinos);
+dinosaurs=# update dinos set name = 'Shortie' where length = (select min(length) from dinos);
 UPDATE 1
-dinosaurs=# select species from dinos where length = (select min(length) from dinos);
- species
+dinosaurs=# select name from dinos where length = (select min(length) from dinos);
+  name
 ---------
  Shortie
 (1 row)
@@ -538,8 +532,8 @@ dinosaurs=# select species from dinos where length = (select min(length) from di
 7. It's the first day of Dino School, and we're doing roll call. Find the alphabetically
 first dinosaur, so we can make sure they're present for class.
 
-dinosaurs=# select species from dinos order by species asc limit 1;
-  species
------------
- Abakensis
+dinosaurs=# select name from dinos order by species asc limit 1;
+    name
+-------------
+ Afrovenator
 (1 row)
